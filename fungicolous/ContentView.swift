@@ -9,14 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("test")
+        GeometryReader{geometry in
+            ZStack {
+                Image("TitleImage")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:geometry.size.width,height: geometry.size.height)
+                    .clipped()
+                
+                Text("Fungicolous fungi").font(.largeTitle).fontWeight(.bold).foregroundStyle(.white).shadow(color:.black.opacity(0.7),radius: 5)
+            }
+            .frame(
+                width:geometry.size.width,
+                height:geometry.size.height
+            )
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
