@@ -9,6 +9,11 @@ import SwiftUI
 
 extension Color{
     static let bisque=Color(red:255/255,green:228/255,blue:196/255)
+    static let ForesGreen=Color(red:53/255,green:94/255,blue: 75/255)
+    static let SandBeige=Color(red:216/255,green: 199/255,blue: 163/255)
+    static let RussetBrown=Color(red:139/255,green: 94/255,blue: 75/255)
+    static let SageGreen=Color(red:168/255,green:184/255,blue: 160/255)
+    static let DustyBlue=Color(red:125/255,green: 145/255,blue:168/255)
 }
 
 struct HomeView:View{
@@ -21,13 +26,13 @@ struct HomeView:View{
                     //検索のやつを入れたい
                 }
                 HStack{
-                    Text("図鑑を見る").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.green)
-                    Text("標本を記録する").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.yellow)
-                    Text("学ぶ・調べる").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.purple).foregroundStyle(.white)
+                    Text("図鑑を見る").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(Color.ForesGreen).foregroundStyle(.white)
+                    Text("標本を記録する").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(Color.SandBeige)
+                    Text("学ぶ・調べる").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(Color.RussetBrown).foregroundStyle(.white)
                 }.fontWeight(.bold).frame(width: geometry.size.width,height:geometry.size.height*0.25)
                 HStack{
-                    Text("コミュニティ").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.red).foregroundStyle(.white)
-                    Text("Web版を開く").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.blue).foregroundStyle(.white)
+                    Text("コミュニティ").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(Color.SageGreen).foregroundStyle(.black)
+                    Text("Web版を開く").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(Color.DustyBlue).foregroundStyle(.white)
                 }.fontWeight(.bold).frame(width:geometry.size.width,height:geometry.size.height*0.25)
                 Text("お知らせ")
             }
