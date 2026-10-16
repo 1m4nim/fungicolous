@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+extension Color{
+    static let bisque=Color(red:255/255,green:228/255,blue:196/255)
+}
+
 struct HomeView:View{
     var body: some View{
         GeometryReader{geometry in
@@ -17,17 +21,17 @@ struct HomeView:View{
                     //検索のやつを入れたい
                 }
                 HStack{
-                    Text("図鑑を見る")
-                    Text("標本を記録する")
-                    Text("学ぶ・調べる")
-                }
+                    Text("図鑑を見る").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.green)
+                    Text("標本を記録する").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.yellow)
+                    Text("学ぶ・調べる").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.purple).foregroundStyle(.white)
+                }.fontWeight(.bold).frame(width: geometry.size.width,height:geometry.size.height*0.25)
                 HStack{
-                    Text("コミュニティ")
-                    Text("WEB版を開く")
-                }
+                    Text("コミュニティ").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.red).foregroundStyle(.white)
+                    Text("Web版を開く").fontWeight(.bold).frame(maxWidth: .infinity).padding(.vertical,20).background(.blue).foregroundStyle(.white)
+                }.fontWeight(.bold).frame(width:geometry.size.width,height:geometry.size.height*0.25)
                 Text("お知らせ")
             }
-        }
+        }.background(Color.bisque)
     }
 }
 
